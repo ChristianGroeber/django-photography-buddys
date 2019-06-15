@@ -68,13 +68,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          {% for page in pages %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url page.url %}">{{ page.name }}</a>
-            </li>
-          {% endfor %}
             <li class="nav-item">
               <a class="nav-link" href="login/">Login/Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'community' %}">Community</a>
             </li>
         </ul>
       </div>
