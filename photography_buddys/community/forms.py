@@ -7,7 +7,7 @@ from .models import Photographer
 class PhotographerCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = Photographer
-        exclude = ()
+        exclude = ('last_login', 'is_superuser', 'groups', 'user_permissions', 'date_joined', 'password', 'is_staff', 'is_active', )
 
 
 class PhotographerChangeForm(UserChangeForm):
