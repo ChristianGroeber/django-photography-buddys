@@ -1,0 +1,24 @@
+input[type=text], input[type=password]{
+    border: 0;
+    background-color: #bfbfbf;
+    background-image: url('/static/img/patterns/fzm-leather.texture-07-[300x300].jpg');
+    border-radius: 20px;
+}
+
+input[type=text]:hover, input[type=password]:hover{
+    background-image: url('/static/img/patterns/fzm-leather.texture-07-[300x300]-transparent.jpg');
+    background-color: #dddddd;
+}
+
+input:focus{
+    outline: 0;
+}
+
+button{
+    background-image: url('/static/img/patterns/red-leather.jpg');
+    color:white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 2px !important;
+}

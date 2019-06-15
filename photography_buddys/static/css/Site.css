@@ -13,3 +13,10 @@ a.navbar-brand, .nav-link{
 .unfix{
     position: unset !important;
 }
+
+*{
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+}
