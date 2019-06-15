@@ -42,8 +42,11 @@ def logout(request):
 
 
 def new_google_user(request):
-    print(request.user)
     photographers = Group.objects.get(name='Photographers')
     photographers.user_set.add(request.user)
-
     return redirect('home')
+
+
+def user(request, username):
+    user = Photographer.objects.get(username=username)
+    return render(request, 'community/user.html', {'user': user})

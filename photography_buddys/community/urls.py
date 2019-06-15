@@ -9,4 +9,5 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('logout/', views.logout, name='logout'),
     path('login/google/', include('social_django.urls', namespace='social')),
+    path('user/<username>/', views.user),
 ]

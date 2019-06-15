@@ -31,13 +31,13 @@
       if (masthead === 0){
         $('nav').removeAttr('id');
         $('nav').css('background-color', 'white');
-        $('.content').css('margin-top', $('nav').height() + 'px');
+        // $('.content').css('margin-top', $('nav').height() + 'px');
       }
 
       var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       var hBody = $('.content').height();
       if (hBody < h){
-        $('.content').css('height', h - $('footer').height() - 100);
+        $('.content').css('height', h - $('footer').height());
       }
 
       $(document).scroll(function(){
@@ -45,13 +45,21 @@
         var loginHeight = $('.login-row').height();
         var nav = $('nav');
         if (scrollTop > loginHeight){
+          $('.content').addClass('padded');
           nav.removeClass('unfix');
         }else if (scrollTop <= loginHeight){
+          $('.content').removeClass('padded');
           nav.addClass('unfix');
         }
       })
     })
   </script>
+
+  <style>
+    .padded{
+      padding-top: 40px;
+    }
+  </style>
 </head>
 
 <body id="page-top">
