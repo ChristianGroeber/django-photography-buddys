@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-import os
+import os, json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -64,12 +65,29 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  # <- Here
+                'social_django.context_processors.login_redirect', # <- Here
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'photography_buddys.wsgi.application'
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+    'social_core.backends.google.GoogleOpenId',  # for Google authentication
+    'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+with open(os.path.join(BASE_DIR, 'client_secret_287450284894-nco6frisrbo9vjn9cfcm9oq9jbrfp70b.apps.googleusercontent.com.json'), 'r') as f:
+    datastore = json.load(f)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '287450284894-nco6frisrbo9vjn9cfcm9oq9jbrfp70b.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = datastore['web']['client_secret']
 
 
 # Database
@@ -123,6 +141,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static_cdn'
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
+STATICFILES_DIRS = [
+    os.path.join(SETTINGS_PATH, "static"),
+]
 
 
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))

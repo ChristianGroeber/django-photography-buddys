@@ -1,10 +1,11 @@
 from django.contrib import auth
 from django.contrib.auth import authenticate
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.shortcuts import render, redirect
 
 
 # Create your views here.
+from .models import Photographer
 from .forms import PhotographerLoginForm, PhotographerCreationForm
 
 
@@ -37,4 +38,12 @@ def register(request):
 
 def logout(request):
     auth.logout(request)
+    return redirect('home')
+
+
+def new_google_user(request):
+    print(request.user)
+    photographers = Group.objects.get(name='Photographers')
+    photographers.user_set.add(request.user)
+
     return redirect('home')
