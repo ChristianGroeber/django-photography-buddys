@@ -1,0 +1,15 @@
+footer{
+
+}
+
+nav{
+    color: black !important;
+}
+
+a.navbar-brand, .nav-link{
+    color: black !important;
+}
+
+.unfix{
+    position: unset !important;
+}
