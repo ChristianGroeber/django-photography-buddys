@@ -58,7 +58,11 @@
 
   <!-- Navigation -->
     <div class="login-row">
-      <a href="{% url 'login' %}">Login</a>
+      {% if login_required %}
+        <a href="{% url 'login' %}">Login</a>
+      {% else %}
+        Hello {{ user.username }} <a href="{% url 'logout' %}">Logout</a>
+      {% endif %}
     </div>
   <nav class="unfix navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
