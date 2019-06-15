@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="login">
@@ -18,5 +19,5 @@
 <a href="../login/">Login with an existing account</a>
 {% endif %}
 </div>
-<a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+<a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'img/google-login/btn_google_signin_light_normal_web@2x.png' %}" height="70"> </a>
 {% endblock %}

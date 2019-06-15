@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import PhotographerCreationForm, PhotographerChangeForm
-from .models import Photographer
+from .models import Photographer, City, Country
 
 
 class PhotographerAdmin(UserAdmin):
@@ -15,3 +15,6 @@ class PhotographerAdmin(UserAdmin):
 
 
 admin.site.register(Photographer, PhotographerAdmin)
+admin.site.register(City)
+admin.site.register(Country)
+
