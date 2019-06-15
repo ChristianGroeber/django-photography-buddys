@@ -8,12 +8,14 @@
     {{ login_form.as_p }}
     <button type="submit">Login</button>
 </form>
+<a href="../register/">Create a new account instead</a>
 {% else %}
 <form class="register" method="POST">
     {% csrf_token %}
     {{ register_form.as_p }}
     <button type="submit">Register</button>
 </form>
+<a href="../login/">Login with an existing account</a>
 {% endif %}
 </div>
 {% endblock %}

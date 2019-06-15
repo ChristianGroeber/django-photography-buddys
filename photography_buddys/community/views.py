@@ -29,7 +29,6 @@ def register(request):
     if request.method == 'GET':
         return render(request, 'community/login.html', {'register_form': register_form})
     if register_form.is_valid():
-        print('valid')
         phot = register_form.save()
         photographers = Group.objects.get(name='Photographers')
         photographers.user_set.add(phot)
@@ -37,4 +36,5 @@ def register(request):
 
 
 def logout(request):
+    auth.logout(request)
     return redirect('home')
