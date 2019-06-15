@@ -1,0 +1,22 @@
+input[type=text], input[type=password]{
+    border: 0;
+    background-color: #bfbfbf;
+    border-radius: 20px;
+}
+
+input[type=text]:hover, input[type=password]:hover{
+    background-color: #dddddd;
+}
+
+input:focus{
+    outline: 0;
+}
+
+button{
+    background-color: blue;
+    color:white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 2px !important;
+}
