@@ -20,6 +20,7 @@ from community import views as comm_views
 urlpatterns = [
     path('', include('website.urls')),
     path('community/', include('community.urls')),
+    path('trips/', include('trip.urls')),
     path('admin/', admin.site.urls),
     path('accounts/profile/', comm_views.new_google_user),
 ]
