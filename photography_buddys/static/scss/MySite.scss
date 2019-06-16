@@ -19,6 +19,11 @@ a:hover{
     color: complement($link-color) !important;
 }
 
+.content{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 nav{
     background-color: blue;
     padding: unset !important;
