@@ -68,7 +68,7 @@
   <!-- Navigation -->
     <div class="login-row">
       {% if login_required %}
-        <a href="{% url 'login' %}">Login</a>
+        <a class="colorful" href="{% url 'login' %}">Login</a>
       {% else %}
         Hello {{ user.username }} <a href="{% url 'logout' %}">Logout</a>
       {% endif %}

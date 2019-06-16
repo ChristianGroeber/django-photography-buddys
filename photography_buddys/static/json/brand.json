@@ -1,11 +1,40 @@
 {
   "project": {
-    "colors": {
-      "black":{
-        "name": "EERIE BLACK",
-        "hash-code": "#191A1C"
-      }
+    "palettes": {
+      "palette1": {
+        "black1":{
+          "name": "EERIE BLACK",
+          "hash-code": "#191A1C"
+        }
+      },
+      "palette2": {
+        "black": {
+          "name": "JET",
+          "hash-code": "#342E37"
+        }
+      },
+      "palette3": {
+        "col1": "#342E37",
+        "col2": "#6B485A",
+        "col3": "#A9636B",
+        "col4": "#DE886A",
+        "col5": "#FBBB65"
+      },
+      "palette4": {
+        "black": {
+          "name": "JET",
+          "hash-code": "#342E37"
+        },
+        "col1": "#21818B",
+        "col2": "#289F99",
+        "col3": "#4ABC9E",
+        "col4": "#2F4858",
+        "col5": "#2B6475"
+      },
+      "crazy-ass-gradient": "background-image: radial-gradient(circle, #2c00ff, #007bff, #00a8ff, #00cad5, #00e4a2, #5be279, #8bdd4b, #b7d500, #d0b500, #e69000, #f66200, #ff0000);"
     }
   },
-  "name": "Photography Buddies"
+  "names": {
+    "name1": "Photography Buddies",
+  }
 }
