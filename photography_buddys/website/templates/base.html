@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 <html lang="en">
 
 <head>
@@ -21,6 +22,9 @@
   <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
   <link href="{% static 'css/Site.css' %}" rel="stylesheet">
   <link href="{% static 'css/forms.css' %}" rel="stylesheet">
+
+  <!--scss-->
+  <link href="{% sass_src 'scss/_MySite.scss' %}" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="{% static 'css/creative.css' %}" rel="stylesheet">

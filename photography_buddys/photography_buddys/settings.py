@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -148,6 +149,21 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 STATICFILES_DIRS = [
     os.path.join(SETTINGS_PATH, "static"),
 ]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(BASE_DIR, 'extra-styles/scss'),
+    os.path.join(BASE_DIR, 'node_modules'),
+]
+
+SASS_PROCESSOR_ROOT = STATIC_ROOT
+SASS_PRECISION = 8
+SASS_OUTPUT_STYLE = 'compact'
 
 
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
