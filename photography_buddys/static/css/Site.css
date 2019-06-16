@@ -2,26 +2,6 @@ footer{
 
 }
 
-nav{
-    color: black !important;
-}
-
-a{
-    color: #342E37 !important;
-}
-
-a.colorful {
-    color: #21818B !important;
-}
-
-a.colorful:hover{
-    color: #289F99 !important;
-}
-
-a.navbar-brand, .nav-link{
-    color: black !important;
-}
-
 .unfix{
     position: unset !important;
 }

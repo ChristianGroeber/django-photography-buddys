@@ -1,0 +1,46 @@
+$text-black: #342E37;
+$nav-link-color: $text-black;
+$link-color: #21818B;
+
+*{
+    -webkit-transition: background-color 0.3s;
+    -webkit-transition: color 0.3s;
+}
+
+p{
+    color: $text-black !important;
+}
+
+a{
+    color: $link-color !important;
+}
+
+a:hover{
+    color: complement($link-color) !important;
+}
+
+nav{
+    background-color: blue;
+
+    .py-3{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .nav-item{
+        a {
+            display: block;
+            margin-left: 20px !important;
+            border-radius: 5px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        a:hover {
+            color: lighten(invert($link-color), 20) !important;
+            background-color: complement($link-color);
+        }
+    }
+
+
+}
